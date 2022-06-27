@@ -44,7 +44,7 @@ fun main() {
     val rsaPrvSignKey = rsaPrvKey
     val messageToSign = decryptedMessage
     println("PrvKey (Base64): $rsaPrvSignKey")
-    println("Message (Base64): $messageToSign")
+    println("Message: $messageToSign")
     val signature = RSA.sign(messageToSign.toByteArray(), rsaPrvSignKey)
     val signatureBase64 = signature.encodeToBase64()
     println("Signature (Base64): $signatureBase64")
